@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: pink;
+        }
+        .counter-container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        .count {
+            font-size: 50px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .increment { background: blue; color: white; }
+        .decrement { background: blue; color: white; }
+        .reset { background: red; color: white; }
+    </style>
+</head>
+<body>
+    <div class="counter-container">
+        <h2>Counter Application</h2>
+        <div class="count" id="counter">0</div>
+        <button class="increment" onclick="increment()">+</button>
+        <button class="decrement" onclick="decrement()">-</button>
+        <button class="reset" onclick="reset()">Reset</button>
+    </div>
+
+    <script>
+        let count = 0;
+        const counter = document.getElementById("counter");
+        
+        function increment() {
+            count++;
+            counter.innerText = count;
+        }
+        
+        function decrement() {
+            count--;
+            counter.innerText = count;
+        }
+        
+        function reset() {
+            count = 0;
+            counter.innerText = count;
+        }
+    </script>
+</body>
+</html>
